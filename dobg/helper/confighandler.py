@@ -6,12 +6,10 @@ sys.path.append('..')
 
 from dobg.exceptions.configexceptions import MissingTokenException
 
-from pkg_resources import Requirement, resource_filename
-
 
 # Helper class for config file
 class ConfigHandler:
-    config_file = resource_filename(Requirement.parse("dobg"),"dobg-config.json")
+    config_file = os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + '/dobg-config.json'
 
     @classmethod
     def get_config_setting(cls, key):
