@@ -1,9 +1,9 @@
 # DOBGCLI
----
+
 Command line tool for easier management of your Digital Ocean droplets.
 
 ## Getting started
----
+
 ### Prerequisities
 You will need to install [Python3](https://www.python.org/downloads/). Pip3 should be included in Python3 installation. Otherwise, install [pip3](https://pip.pypa.io/en/stable/installing/) manually.
 
@@ -22,7 +22,7 @@ dobg settoken <your_token>
 After that, you will be able to use all other subcommands.
 
 ## Subcommands
----
+
 ### List of subcommands:
 - `settoken` sets the user's Digital Ocean token in config file;
 - `createdroplet` creates new droplet;
