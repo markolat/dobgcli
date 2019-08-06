@@ -20,7 +20,7 @@ dobg settoken <your_token>
 After that, you will be able to use all other subcommands.
 
 ## Subcommands
----
+
 ### List of subcommands:
 - `settoken` sets the user's Digital Ocean token in config file;
 - `createdroplet` creates new droplet;
