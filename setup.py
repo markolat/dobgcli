@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="dobg",
     install_requires=['requests', 'python-digitalocean>=1.14.0'],
-    version="0.0.21",
+    version="0.0.22",
     entry_points = {
         "console_scripts": ['dobg = dobg.dobg:main']
         },
