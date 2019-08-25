@@ -26,10 +26,11 @@ def list_droplets(args):
         return
 
     # make a helper function that will accept droplet and format print like this
-    result = '{:15}{:40}{:10}{:18}{}'.format('ID:', 'Name:', 'Region:', 'Size:', 'Image:\n')
+    result = '{:15}{:40}{:10}{:18}{:37}{}'.format('ID:', 'Name:', 'Region:', 'Size:', 'Image:', 'Status:\n')
     for droplet in droplets:
-        result += '{:<15}{:40}{:10}{:18}{}\n'.format(droplet.id, droplet.name, droplet.region['slug'], droplet.size_slug, droplet.image['slug'])
-
+        image = droplet.image['slug'] if droplet.image['slug'] else 'None' # instead of doing '!s' in format parenthesis (e.g. {!s:37})
+        result += '{:<15}{:40}{:10}{:18}{:37}{}\n'.format(droplet.id, droplet.name, droplet.region['slug'], droplet.size_slug, image, droplet.status)
+        
     print(result)
 
         

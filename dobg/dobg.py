@@ -10,6 +10,8 @@ from .commands.deletedroplet import delete_droplet
 from .commands.listdroplets import list_droplets
 from .commands.listsizes import list_sizes
 from .commands.listimages import list_images
+from .commands.shutdowndroplet import shutdown_droplet
+from .commands.powerondroplet import power_on_droplet
 
 from .helper.confighandler import ConfigHandler
 from .helper.exceptionhandler import ExceptionHandler
@@ -47,10 +49,20 @@ def main():
     listimages_command = commands.add_parser('listimages', help="Lists all Images available")
     listimages_command.set_defaults(func=list_images)
 
+    # powerondroplet command
+    deletedroplet_command = commands.add_parser('powerondroplet', help="Turns on a Droplet")
+    deletedroplet_command.add_argument("id", type=int, help="Id that uniquely identifies a Droplet.")
+    deletedroplet_command.set_defaults(func=power_on_droplet)
+
     # settoken command
     settoken_command = commands.add_parser('settoken', help="Sets the authentication token in config file")
     settoken_command.add_argument('token', help="Authentication token provided by Digital Ocean")
     settoken_command.set_defaults(func=set_token)
+
+    # shutdowndroplet command
+    deletedroplet_command = commands.add_parser('shutdowndroplet', help="Turns off a Droplet")
+    deletedroplet_command.add_argument("id", type=int, help="Id that uniquely identifies a Droplet.")
+    deletedroplet_command.set_defaults(func=shutdown_droplet)
 
     args = parser.parse_args()
 
