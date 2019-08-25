@@ -22,9 +22,11 @@ After that, you will be able to use all other subcommands.
 ## Subcommands
 
 ### List of subcommands:
-- `settoken` sets the user's Digital Ocean token in config file;
 - `createdroplet` creates new droplet;
-- `deletedroplet` destroys a droplet;
+- `deletedroplet` destroys droplet;
 - `listdroplets` lists all of user's droplets;
 - `listsizes` lists all available sizes;
 - `listimages` lists all available images;
+- `powerondroplet` powers on droplet;
+- `settoken` sets the user's Digital Ocean token in config file;
+- `shutdowndroplet` powers off droplet;
