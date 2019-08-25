@@ -8,7 +8,7 @@ from dobg.helper.confighandler import ConfigHandler
 def set_token(args):
     """ Sets a Digital Ocean authentication token in configuration file """
 
-    answer = input('Are you sure you want to set this token? (yes/no)\n\nToken: {}\n\n'.format(args.token))
+    answer = input('Are you sure you want to set this token? (yes/no): ')
     print()
     
     if answer in ('y', 'Y', 'yes', 'YES', 'Yes'):
